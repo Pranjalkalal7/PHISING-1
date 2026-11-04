@@ -18,15 +18,31 @@ This project is an educational simulator. It does not perform real phishing, sen
 
 ## Technology
 
-- Laravel 12 for local routing and serving the app shell.
+- Python & Streamlit for cloud deployment and interactive simulation (`streamlit_app.py`).
+- Laravel 12 for local routing and serving the legacy app shell.
 - Plain JavaScript modules for the browser application.
 - CSS for responsive dark cybersecurity-themed UI.
 - JSON for scenario definitions.
-- LocalStorage for training progress.
+- LocalStorage / Session State for training progress.
 
-The original repository included Vite assets, but this environment does not have `node` or `npm` available. The simulator therefore uses static files in `public/` so it can run locally with PHP alone.
+## Streamlit Cloud Deployment
 
-## Installation
+To deploy this project to Streamlit Community Cloud:
+
+1. Push this repository to GitHub.
+2. Sign in to [Streamlit Community Cloud](https://share.streamlit.io/).
+3. Click **New app** and select your repository and branch.
+4. Set the **Main file path** to `streamlit_app.py`.
+5. Click **Deploy!**
+
+To run the Streamlit app locally:
+
+```bash
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+## Local PHP Installation
 
 Install PHP dependencies if needed:
 
